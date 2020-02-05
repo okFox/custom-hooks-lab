@@ -1,11 +1,11 @@
 import React from 'react';
-import { QuoteAppFn } from './QuoteApp';
+import { QuoteApp } from './QuoteApp';
 
 export default function App() {
 
   return (
     <>
-      <QuoteAppFn />
+      <QuoteApp />
     </>
   );
 }

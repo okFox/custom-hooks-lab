@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const getQuotesByCharacter = characterName => {
+export const getQuotesByCharacter = characterName => {
   return fetch(`https://cors-anywhere.herokuapp.com/futuramaapi.herokuapp.com/api/characters/${characterName}`, {
     headers: {
       origin: null
@@ -16,18 +16,6 @@ const getQuotesByCharacter = characterName => {
 };
 
 
-//userNum will be the number of quotes the user selects that they want to see
-const fetchNumOfQuotes = (quotesArray) => {
-  let pullQuotes = quotesArray.slice();
-  let userNum = 3;
-  let arrayForDisplay = [];
-  while(userNum >= 3){
-    let index = Math.floor(Math.random() * (pullQuotes.length - 1));
-    arrayForDisplay.push(quotesArray.splice(index, 1));
-    userNum--;
-  }
-  return arrayForDisplay;
-};
 
 
 
