@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import characterList from '../services/characterList.json';
 import Character from './Character';
+import PropTypes from 'prop-types';
 
 
-export const Characters = () => {
+export const Characters = ({ onChange }) => {
 
   // const [characterList, setCharacterList] = useState({
   //   name:'',
@@ -11,7 +12,7 @@ export const Characters = () => {
   // });
     
   const characterRadios = characterList.characters.map((character, i) => (
-    <Character key={i} name={character.name} img={character.img} />
+    <Character key={i} name={character.name} img={character.img} onChange={onChange} />
   ));
 
   return (
@@ -25,7 +26,9 @@ export const Characters = () => {
       
   );
 };
-
+Characters.propTypes = {
+  onChange: PropTypes.func.isRequired
+};
 
 
 export default Characters;

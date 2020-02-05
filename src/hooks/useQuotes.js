@@ -24,7 +24,7 @@ export const useQuotes = () => {
       pullQuotes.push(pushMe);
     }
 
-   return pullQuotes;
+    return pullQuotes;
 
     
   };

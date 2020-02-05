@@ -9,21 +9,22 @@ export const QuoteApp = () => {
   const { number, character, setNumber, setCharacter, arrayForDisplay } = useQuotes();
 
   const handleSubmit = event => {
+    
     event.preventDefault();
-    setCharacter(character);
-    setNumber(number);
+    // setCharacter(character);
+    // setNumber(number);
   };
 
-  const handleCharacterChange = ({ target }) => setCharacter(target.name);
-  const handleNumberChange = ({ target }) => setNumber(target.number);
+  const handleCharacterChange = ({ target }) => setCharacter(target.id);
+  const handleNumberChange = ({ target }) => setNumber(target.value);
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <div className='radios'>
-          <Characters onClick={handleCharacterChange} />
+          <Characters character={character} onChange={handleCharacterChange} />
         </div>
-        <Dropdown onClick={handleNumberChange}/>
+        <Dropdown number={number} onChange={handleNumberChange}/>
         <button>Get Quotes</button>
       </form>
 
