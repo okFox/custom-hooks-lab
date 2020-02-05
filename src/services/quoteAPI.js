@@ -1,4 +1,5 @@
-import React from 'react';
+// import Character from '../components/Character';
+
 
 
 
@@ -10,29 +11,9 @@ export const getQuotesByCharacter = characterName => {
     }
   })
     .then(res => res.json())
-    .then(characterQuotes => characterQuotes.map(({ text: quote }) => ({
-      quote
-    })));
-};
-
-
-
-
-
-
-
-
-
-
-
-// export const fetchQuote = () => {
-//     return fetch('https://futuramaapi.herokuapp.com/api/quotes/10')
-//       .then(res => res.json())
-//       .then(([{ quote, character, image }]) => ({
-//         text: quote,
-//         name: character,
-//         img: image
-//       }));
-//   };
-
-// futuramaapi.herokuapp.com/api/characters/<character name> get all quotes by character
+    .then(characters => characters.map(character => {
+      return { 
+        quote: character.quote
+      };
+  
+    }));};
