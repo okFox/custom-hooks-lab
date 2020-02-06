@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 import './QuoteApp.css';
-import { useQuotes } from '../Hooks/useQuotes';
+import { useQuotes } from '../hooks/useQuotes';
 import Characters from './Characters';
 
 export const QuoteApp = () => {
