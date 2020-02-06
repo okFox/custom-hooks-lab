@@ -1,0 +1,14 @@
+.radios {
+    height: 100vh;
+    width: 100vw;
+}
+img {
+    height: 300px;
+    width: auto;
+    cursor: pointer;
+    
+}
+
+input[type='radio'] {
+    display: none;
+}
