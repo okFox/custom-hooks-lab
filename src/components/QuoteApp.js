@@ -11,12 +11,16 @@ export const QuoteApp = () => {
   const handleSubmit = event => {
     
     event.preventDefault();
-    // setCharacter(character);
-    // setNumber(number);
+
   };
 
   const handleCharacterChange = ({ target }) => setCharacter(target.id);
   const handleNumberChange = ({ target }) => setNumber(target.value);
+
+  // const quoteList = arrayForDisplay.map((quote, i) => (
+  //   <p key={i}>{quote.quote}</p>
+  // ));
+
 
   return (
     <>
@@ -29,7 +33,10 @@ export const QuoteApp = () => {
       </form>
 
       <section className='displayQuotes'>
-        {JSON.stringify(arrayForDisplay)}
+        {arrayForDisplay.map((quote, i) => {
+          return quote && (
+            <p key={i}>{quote.quote}</p>
+          );})}
       </section>
       
     </> 
