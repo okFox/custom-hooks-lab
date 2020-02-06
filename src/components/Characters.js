@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import characterList from '../services/characterList.json';
 import Character from './Character';
 import PropTypes from 'prop-types';
 
-
 export const Characters = ({ onChange }) => {
 
-  // const [characterList, setCharacterList] = useState({
-  //   name:'',
-  //   img:''
-  // });
-    
   const characterRadios = characterList.characters.map((character, i) => (
     <Character key={i} name={character.name} img={character.img} onChange={onChange} />
   ));
@@ -18,12 +12,9 @@ export const Characters = ({ onChange }) => {
   return (
     <>
       <section>
-
         {characterRadios}
-
       </section>
-    </>
-      
+    </>   
   );
 };
 Characters.propTypes = {

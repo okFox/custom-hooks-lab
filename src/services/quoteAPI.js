@@ -1,9 +1,3 @@
-// import Character from '../components/Character';
-
-
-
-
-
 export const getQuotesByCharacter = characterName => {
   return fetch(`https://cors-anywhere.herokuapp.com/futuramaapi.herokuapp.com/api/characters/${characterName}`, {
     headers: {
@@ -15,5 +9,4 @@ export const getQuotesByCharacter = characterName => {
       return { 
         quote: character.quote
       };
-  
     }));};

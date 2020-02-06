@@ -8,19 +8,12 @@ export const QuoteApp = () => {
 
   const { number, character, setNumber, setCharacter, arrayForDisplay } = useQuotes();
 
-  const handleSubmit = event => {
-    
+  const handleSubmit = event => { 
     event.preventDefault();
-
   };
 
   const handleCharacterChange = ({ target }) => setCharacter(target.id);
   const handleNumberChange = ({ target }) => setNumber(target.value);
-
-  // const quoteList = arrayForDisplay.map((quote, i) => (
-  //   <p key={i}>{quote.quote}</p>
-  // ));
-
 
   return (
     <>

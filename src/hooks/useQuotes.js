@@ -1,5 +1,5 @@
   
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getQuotesByCharacter } from '../services/quoteAPI';
 
 export const useQuotes = () => {
@@ -23,18 +23,13 @@ export const useQuotes = () => {
       const [pushMe] = quotesCopy.splice(index, 1);
       pullQuotes.push(pushMe);
     }
-
-    return pullQuotes;
-
-    
+    return pullQuotes;   
   };
 
   useEffect(() => {
     setArrayForDisplay(getRandomQuotes(number));
     
   }, [quotes, number]);
-
-
 
   return { character, setCharacter, number, setNumber, quotes, arrayForDisplay };
 };
